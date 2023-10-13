@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+}
+
+body {
+    font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: url('img/wallpaperbetter (1).jpg') no-repeat center;
+    background-size: cover;
+    background-position: center right;
+}
+
+/*APLICARIONS ESCRITORIO*/
+.container .trash {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.container .icon:nth-child(1) {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.container .icon:nth-child(2) {
+    position: absolute;
+    left: 20px;
+    top: 150px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*--MENU WINDOWS--*/
+.menu-down {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    bottom: -500%;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 37.5em;/* 600/16 */
+    background: rgb(39, 39, 39);
+    background: #272727;
+    color: #fff;
+}
+
+.menu-up {
+    position: absolute;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+/*--ACCIONES--*/
+.menu-down .action {
+    position: absolute;
+    z-index: 10;
+    background: #272727;
+}
+
+.menu-down .action .title {
+    display: grid;
+    grid-template-columns: 1em 0.3125em;/* 16/16 *//* 5/16 */
+    text-align: center;
+    padding: 1em;/* 16/16 */
+    border: 1px solid #272727;
+}
+
+.menu-down .action .title:nth-child(2) {
+    margin-top: 238px;/* 238/16 */
+}
+
+.menu-down .action .title:hover {
+    background: #343434;
+}
+
+.menu-down .action .title p {
+    margin-top: -0.125em;/* 2/16 */
+    text-indent: -666em;
+    overflow: hidden;
+}
+
+/*--AGREGADOS RECIENTEMENTE--*/
+.menu-down .add {
+    position: relative;
+    margin-left: 3.75em;/* 60/16 */
+    width: 15.625em;/* 250/16 */
+    margin-right: 1.25em;/* 20/16 */
+}
+
+.menu-down .add p {
+    font-size: 0.75rem;/* 12/16 */
+    padding: 0.8125em 0.1875em;/* 13/16 *//* 3/16 */
+}
+
+.menu-down .add figure {
+    display: flex;
+    align-items: center;
+    padding: 0.125em 0.1875em;/* 2/16 *//* 3/16 */
+}
+
+.menu-down .add figure img {
+    background: #0078D7;
+    padding: 0.1875em; /* 3/16 */
+    max-width: 100%;
+}
+
+.menu-down .add figure p {
+    padding-left: 0.625em;/* 10/16 */
+}
+
+.menu-down .add figure span {
+    font-size: 0.625rem;/* 10/16 */
+    position: absolute;
+    padding-right: 0.3125em;/* 5/16 */
+    right: 0;
+
+}
+
+.menu-down .add figure:hover,
+.add p:hover {
+    background: #343434;
+
+}
+
+/*--GRUPO Y EXPLORAR--*/
+.menu-down .group {
+    position: relative;
+
+}
+
+.menu-down .group img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.menu-down .group .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-down .group .txt p {
+    font-size: 0.75rem;/* 12/16 */
+    padding: 0.8125em 0;/* 13/16 */
+}
+
+.menu-down .group .box-group .txt {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+
+.menu-down .group .box-group .txt .color {
+    color: #A5A4A2;
+}
+
+.menu-down .group .txt .content .bars {
+    width: 0.9375em;/* 15/16 */
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2px;
+}
+
+.menu-down .group .box-explo .txt .content {
+    display: none;
+}
+
+/*--BARRA DE HERRAMIENTAS--*/
+.bar {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    background: #1C1C1C;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*--BARRA ICONOS IZQUIERDA--*/
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left span {
+    font-size: 1.125rem;/* 18/16 */
+    color: #fff;
+    padding: 0.8125em 0.9375em;/* 13/16 *//* 15/16 */
+}
+
+.left span:hover {
+    background: #343434;
+    color: #429CE3;
+}
+
+.left form {
+    position: relative;
+}
+
+.left form img {
+    position: absolute;
+    width: 2.1875em;/* 35/16 */
+    margin-top: 0.3125em;/* 5/16 */
+    padding: 0.625em;/* 10/16 */
+    pointer-events: none;
+}
+
+.left img {
+    padding: 0.4375em 1.25em; /* 7/16 */
+}
+
+.left img:hover {
+    background: #343434;
+}
+
+.left form input {
+    height: 45px;
+    width: 21.875em;/* 350/16 */
+    padding-left: 2.1875em;/* 35/16 */
+}
+
+.left form input:hover {
+    border: 2px solid #ccc;
+
+}
+
+::-webkit-input-placeholder {
+    /*Chrome y Safari*/
+    font-size: 0.9375em;/* 15/16 */
+    opacity: 0.8;
+}
+
+::-moz-placeholder {
+    /* Firefox */
+    font-size: 0.9375em;/* 15/16 */
+    opacity: 0.8;
+}
+
+::-ms-input-placeholder {
+    /*Explore*/
+    font-size: 0.9375em;/* 15/16 */
+    opacity: 0.8;
+}
+
+/*--BARRA ICNONOS DERECHA--*/
+.right {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.right .time {
+    height: 100%;
+    padding: 0 0.625em;/* 10/16 */
+}
+
+.right span {
+    padding: 15px 0.5em;/* 14/16 *//* 8/16 */
+}
+
+.right img:hover,
+.right .time:hover,
+.right span:hover {
+    background: #343434;
+}
+
+.right img:nth-child(5) {
+    margin-right: 0.625em;/* 10/16 */
+}
+
+.time {
+    text-align: center;
+}
+
+/*--MEDIA QUERIES--*/
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container .icon img, .container .trash img {
+        width: 55px;
+    }
+
+    /*--ACCIONES--*/
+    .menu-down .action .title:nth-child(2) {
+        margin-top: 220px;
+    }
+
+    .right span {
+        padding: 16px 0.5em;
+    }
+    .menu-down {
+        max-width: 580px;
+    }
+}
+/*--MOVIL--*/
+@media (max-width: 972px) {
+    body {
+        font-size: 13px;
+    }
+
+    /*--APLICARIONS ESCRITORIO--*/
+    .container .trash {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .container .icon:nth-child(1) {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .container .icon:nth-child(2) {
+        position: absolute;
+        left: 20px;
+        top: 120px;
+        color: #fff;
+        text-align: center;
+    }
+    .container .icon img, .container .trash img {
+        width: 50px;
+    }
+
+    /*--ACCIONES--*/
+    .menu-down .action .title:nth-child(2) {
+        margin-top: 180px;
+    }
+
+    .menu-down {
+        max-width: 540px;
+    }
+
+    .left span {
+        font-size: 18px;
+        color: #fff;
+        padding: 9px 10px;
+    }
+
+    .left img {
+        padding: 6.5px 10px;
+    }
+
+    .left form img {
+        padding-top: 11px;
+    }
+
+    .left > span {
+        padding: 13.5px 15px;
+    }
+}
+
+/*--MEDIA QUERIES VERTICAL--*/
+@media (max-height: 600px) {
+    /*--ACCIONES--*/
+    .menu-down .action {
+        height: 100%;
+
+    }
+    .menu-down .action .title:nth-child(2) {
+        margin-top: 100px;
+    }
+    .menu-down .group img {
+        height: 135px;
+    }
+}
+
+/* Add the following CSS for volume slider */
+.volume-popup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    transform: translateY(-100%); /* Position it above the volume icon */
+}
+
+.volume-slider {
+    width: 20px; /* Set the width for the vertical slider */
+    height: 150px; /* Set the height for the vertical slider */
+    transform: rotate(90deg); /* Rotate the slider vertically */
+}
+
